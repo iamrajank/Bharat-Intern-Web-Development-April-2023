@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Temperature converter</title>
+</head>
+
+<body>
+    <section>
+        <div class='air air1'></div>
+        <div class='air air2'></div>
+        <div class='air air3'></div>
+        <div class='air air4'></div>
+      </section>
+    <div class="container">
+        
+        <div class="image1">
+            <img src="cold.png" alt="">
+        </div>
+        <form id="calcTemp" onsubmit="calculateTemp(); return false">
+            <label for="temp"><b>Enter the temperature to convert</b></label>
+            <br>
+            <input type="number" name="temp" id="temp" value="0">
+            <select name="temp_diff" id="temp_diff">
+                <option value="cel">&#176;Celsius</option>
+                <option value="fah">&#176;Fahrenheit</option>
+            </select>
+            <br>
+            <input type="submit" name="temp" id="submit">
+            <br>
+            <span id="result"></span>
+            <div class="note">
+                <b>Note:(°F) = ((°C) * 9/5) + 32</b>
+            </div>
+        </form>
+        <div class="image2">
+            <img src="hot.png" alt="">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
